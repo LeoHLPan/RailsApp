@@ -1,2 +1,24 @@
-<h1>Welcome to my Local Server</h1>
-<p>I will continue to add more throughout the term.</p>
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title<%= yield(:title) %> | Bloggster</title>
+	</head>
+	<body>
+		<h1>Home Page</h1>
+		<p>
+		This is my home page. Welcome!!!
+		<br/>
+		<%= x = 25 %>
+		<% while x > 1 %>
+			<% if x.even? %>
+				<%= x /=2 %>
+			<% else %>
+				<%= x = x*3 + 1 %>
+			<% end %>
+		<% end %>
+		</p>
+		<%= image_tag("640x480.jpg", :alt => "autumn") %>
+	</body>
+</html>
+
